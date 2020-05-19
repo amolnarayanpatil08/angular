@@ -3,14 +3,18 @@ var rect=require('./rectangle');
 function solve(l,b)
 {
     console.log("solving for" +l + " and " + b);
-    if(l<=0|| b<=0)
-        console.log("Length or bredth cant be zero");
-    else
-    {
-        console.log("The perimeter of rectangle is:" + rect.perimeter(l,b));
-        console.log("The area of rectangle is:" + rect.area(l,b));
-
-    }
+    rect(l,b,(err,rectangle)=>{
+        if(l<=0|| b<=0)
+        console.log("ERROR" + err.message);
+        else
+        {
+            console.log("The perimeter of rectangle is:" + rectangle.perimeter());
+            console.log("The area of rectangle is:" + rectangle.area());
+    
+        }
+    });
+   
+   
 }
 
 solve(2,3);
