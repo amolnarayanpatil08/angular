@@ -1,7 +1,4 @@
-var rect={
-    perimeter:(l,b)=>(2*(l+b)),
-    area:(l,b)=>(l*b)
-};
+var rect=require('./rectangle');
 
 function solve(l,b)
 {
